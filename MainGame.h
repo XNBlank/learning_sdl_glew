@@ -3,6 +3,8 @@
 #include <glew.h>
 #include "Sprite.h"
 #include "GLSLProgram.h"
+#include "GLTexture.h"
+#include <vector>
 
 enum class GameState {PLAY, EXIT};
 
@@ -18,16 +20,20 @@ private:
     int _screenWidth;
     int _screenHeight;
     GameState _gameState;
+    float _fps;
+    float _maxFPS;
+    float _frameTime;
 
     void initSystems();
     void InitShaders();
+
+    void CalculateFPS();
 
     void Input();
     void Draw();
     void Update();
 
-    Sprite _sprite;
-
+    std::vector <Sprite*> _sprites;
     GLSLProgram _colorProgram;
 };
 

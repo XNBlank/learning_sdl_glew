@@ -11,6 +11,9 @@ public:
     void OpenShaders(const std::string& vertexShaderPath, const std::string& fragmentShaderPath);
     void LinkShaders();
     void AddAttribute(const std::string& attributeName);
+
+    GLuint getUniformLocation(const std::string uniformName);
+
     void Use();
     void Unuse();
 

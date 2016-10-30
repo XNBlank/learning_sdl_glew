@@ -47,11 +47,19 @@
 		<Unit filename="Errors.h" />
 		<Unit filename="GLSLProgram.cpp" />
 		<Unit filename="GLSLProgram.h" />
+		<Unit filename="GLTexture.h" />
+		<Unit filename="IOManager.cpp" />
+		<Unit filename="IOManager.h" />
+		<Unit filename="ImageLoader.cpp" />
+		<Unit filename="ImageLoader.h" />
 		<Unit filename="MainGame.cpp" />
 		<Unit filename="MainGame.h" />
 		<Unit filename="Sprite.cpp" />
 		<Unit filename="Sprite.h" />
+		<Unit filename="Vertex.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="picoPNG.cpp" />
+		<Unit filename="picoPNG.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -72,6 +72,16 @@ void GLSLProgram::AddAttribute(const std::string& attributeName)
     glBindAttribLocation(_programID, _numAttributes++, attributeName.c_str());
 }
 
+GLuint GLSLProgram::getUniformLocation(const std::string uniformName) {
+    GLuint location = glGetUniformLocation(_programID, uniformName.c_str());
+
+    if(location == GL_INVALID_INDEX){
+        fatalError("Uniform " + uniformName + " not found in shader!");
+    }
+
+    return location;
+}
+
 void GLSLProgram::Use()
 {
     glUseProgram(_programID);

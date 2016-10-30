@@ -1,10 +1,16 @@
 #version 130
 
-//Vec3 is the RGB values
-out vec3 color;
+in vec4 fragmentColor;
+in vec2 fragmentUV;
+
+out vec4 color;
+uniform sampler2D mySampler;
 
 void main(){
 
-    color = vec3(1.0, 0.0, 0.0);
+    // color = fragmentColor;
+    vec4 textureColor = texture(mySampler, fragmentUV);
+
+    color = textureColor * fragmentColor;
 
 }
