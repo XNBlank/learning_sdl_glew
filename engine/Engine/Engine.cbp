@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Engine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Engine" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
+					<Add directory="../../deps/include" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="mingw32" />
+					<Add library="libSDL2main" />
+					<Add library="libSDL2" />
+					<Add library="glew32s" />
+					<Add library="opengl32" />
+					<Add directory="../../deps/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Engine" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="Camera2D.cpp" />
+		<Unit filename="Camera2D.h" />
+		<Unit filename="Engine.cpp" />
+		<Unit filename="Engine.h" />
+		<Unit filename="ErrorManager.cpp" />
+		<Unit filename="ErrorManager.h" />
+		<Unit filename="GLSLProgram.cpp" />
+		<Unit filename="GLSLProgram.h" />
+		<Unit filename="GLTexture.h" />
+		<Unit filename="IOManager.cpp" />
+		<Unit filename="IOManager.h" />
+		<Unit filename="ImageLoader.cpp" />
+		<Unit filename="ImageLoader.h" />
+		<Unit filename="InputManager.cpp" />
+		<Unit filename="InputManager.h" />
+		<Unit filename="ResourceManager.cpp" />
+		<Unit filename="ResourceManager.h" />
+		<Unit filename="Sprite.cpp" />
+		<Unit filename="Sprite.h" />
+		<Unit filename="SpriteBatch.cpp" />
+		<Unit filename="SpriteBatch.h" />
+		<Unit filename="TextureCache.cpp" />
+		<Unit filename="TextureCache.h" />
+		<Unit filename="Timing.cpp" />
+		<Unit filename="Timing.h" />
+		<Unit filename="Vertex.h" />
+		<Unit filename="Window.cpp" />
+		<Unit filename="Window.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="picoPNG.cpp" />
+		<Unit filename="picoPNG.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
